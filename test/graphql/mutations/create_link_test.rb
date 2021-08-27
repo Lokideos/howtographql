@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class Mutations::CreateLinkTest < ActiveSupport::TestCase
-
-
   def perform(user: nil, **args)
     user = User.create!(
       name: 'test',
