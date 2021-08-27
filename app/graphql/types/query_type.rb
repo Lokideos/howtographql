@@ -7,7 +7,8 @@ module Types
     field :test_field, String, null: false,
       description: "An example field added by the generator"
 
-    field :all_links, [Types::LinkType], null: false
+    # field :all_links, [Types::LinkType], null: false
+    field :all_links, resolver: Resolvers::LinksSearch
 
     def all_links
       Link.all

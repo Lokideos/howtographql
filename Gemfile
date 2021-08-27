@@ -18,6 +18,7 @@ gem 'bcrypt', '~> 3.1.13'
 
 # GraphQL
 gem 'graphql', '1.9.17'
+gem 'search_object_graphql', '0.3.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
