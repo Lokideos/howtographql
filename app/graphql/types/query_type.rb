@@ -6,6 +6,13 @@ module Types
     # TODO: remove me
     field :test_field, String, null: false,
       description: "An example field added by the generator"
+
+    field :all_links, [Types::LinkType], null: false
+
+    def all_links
+      Link.all
+    end
+
     def test_field
       "Hello World!"
     end
