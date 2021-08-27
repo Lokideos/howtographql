@@ -1,8 +1,16 @@
 require 'test_helper'
 
 class Mutations::CreateLinkTest < ActiveSupport::TestCase
+
+
   def perform(user: nil, **args)
-    Mutations::CreateLink.new(object: nil, field: nil, context: {}).resolve(args)
+    user = User.create!(
+      name: 'test',
+      email: 'test@example.com',
+      password: '123456789'
+    )
+    context = { current_user: user }
+    Mutations::CreateLink.new(object: nil, field: nil, context: context).resolve(args)
   end
 
   test 'create a new link' do
